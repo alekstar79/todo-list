@@ -1,0 +1,14 @@
+.test-data {
+  display: none;
+  margin: 50px 0 0;
+  text-align: center;
+
+  &.show {
+    display: block;
+  }
+}
+
+.test-data__btn {
+  position: relative;
+  overflow: hidden;
+}

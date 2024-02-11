@@ -1,0 +1,66 @@
+.checkbox {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    // @include ripple;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.checkbox__input {
+  &:checked {
+    & + .checkbox__svg {
+      stroke: $color-accent;
+    }
+
+    & + .checkbox__svg .checkbox__path {
+      stroke-dashoffset: 60;
+      transition-delay: 0s;
+    }
+
+    & + .checkbox__svg .checkbox__polyline {
+      stroke-dashoffset: 42;
+      transition-delay: 0.15s;
+    }
+  }
+
+  &:focus {
+    & + .checkbox__svg {
+      stroke: $color-accent;
+    }
+  }
+}
+
+.checkbox__svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke: #c8ccd4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+  transition: all 0.2s ease;
+
+  .checkbox:hover & {
+    stroke: $color-accent;
+  }
+}
+
+.checkbox__path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+  transition: 0.25s;
+}
+
+.checkbox__polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+  transition: 0.2s;
+}

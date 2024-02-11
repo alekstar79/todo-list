@@ -1,0 +1,12 @@
+@mixin ripple {
+  --size: 48px;
+  content: '';
+  position: absolute;
+  top: calc(50% - var(--size) / 2);
+  left: calc(50% - var(--size) / 2);
+  width: var(--size);
+  height: var(--size);
+  background: #f6f6f6;
+  border-radius: 50%;
+  transition: opacity 0.25s ease;
+}

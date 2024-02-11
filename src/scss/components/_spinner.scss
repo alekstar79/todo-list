@@ -1,0 +1,19 @@
+.spinner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  background: rgba($color-white, 0.7);
+  opacity: 0;
+  transition: 0.35s;
+
+  .loading & {
+    visibility: visible;
+    opacity: 1;
+  }
+}

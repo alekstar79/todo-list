@@ -1,0 +1,54 @@
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  z-index: 10;
+  width: 220px;
+  padding: 8px;
+  overflow: hidden;
+  visibility: hidden;
+  background: $color-white;
+  border: 1px solid rgba(197, 200, 205, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba($color-black, 0.02), 0 3px 5px rgba($color-black, 0.028),
+    0 5px 10px rgba($color-black, 0.035), 0 9px 18px rgba($color-black, 0.042), 0 16px 33px rgba($color-black, 0.05),
+    0 39px 80px rgba($color-black, 0.07);
+  opacity: 0;
+  transition: 0.25s;
+  transform: scale(0.7);
+  transform-origin: top right;
+
+  .menu-active & {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 10px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  transition: 0.25s;
+
+  &:hover {
+    background-color: $color-grey-3;
+  }
+}
+
+.menu__btn-icon {
+  margin: 0 10px 2px 0;
+  color: $color-grey;
+  transition: 0.25s;
+
+  .menu__item:hover & {
+    color: inherit;
+  }
+}
